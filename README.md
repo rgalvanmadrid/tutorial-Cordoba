@@ -11,6 +11,11 @@ reproject (https://reproject.readthedocs.io) \
 pyspeckit (https://pyspeckit.readthedocs.io) \
 spectral-cube (https://spectral-cube.readthedocs.io)
 
+Además, el visualizador CARTA: \
+https://cartavis.org
+
+Notebooks: 
+
 - RCrA-archive.ipynb: tutorial para explorar el archivo de ALMA de manera programática, bajar y desplegar algunas imágenes o cubos importantes y decidir si los datos disponibles son útiles o no.
 
   Nota: para la graficación hay un error de compatibilidad entre astropy 5.1.0 and matplotlib 3.7.0. 
