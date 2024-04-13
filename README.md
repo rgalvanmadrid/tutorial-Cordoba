@@ -1,6 +1,9 @@
 # tutorial-Cordoba
 Tutorial en IATE y OAC 15 y 16 de abril de 2024
 
+Diapositivas de intro: 
+https://tinyurl.com/tutorial-Cordoba-RGM 
+
 Dependencias: \
 Python 3 con sus librerías científicas básicas (numpy, matplotlib) \
 astropy (https://www.astropy.org) \
