@@ -9,7 +9,9 @@ aplpy (https://aplpy.github.io) \
 radio-beam (https://radio-beam.readthedocs.io) \
 reproject (https://reproject.readthedocs.io) \
 pyspeckit (https://pyspeckit.readthedocs.io) \
-spectral-cube (https://spectral-cube.readthedocs.io)
+spectral-cube (https://spectral-cube.readthedocs.io) \
+regions (https://astropy-regions.readthedocs.io) 
+
 
 Además, el visualizador CARTA: \
 https://cartavis.org
