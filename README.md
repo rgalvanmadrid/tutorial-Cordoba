@@ -24,7 +24,9 @@ Notebooks:
 - RCrA-archive.ipynb: tutorial para explorar el archivo de ALMA de manera programática, bajar y desplegar algunas imágenes o cubos importantes y decidir si los datos disponibles son útiles o no.
 
   Nota: para la graficación hay un error de compatibilidad entre astropy 5.1.0 and matplotlib 3.7.0. 
-Si se produce el error, actualizar a astropy>=5.1.1 
+Si se produce el error, actualizar a astropy>=5.1.1
+
+- multisource-archive.ipynb: es como la primera parte de RCrA-archive.ipynb, pero para la opción de buscar info sobre un catálogo de fuentes, no solo una. 
   
 - continuum-spix.ipynb: tutorial para explorar y hacer análisis básico imágenes de continuo proporcionadas como un "data product" de un ALMA Large Program. 
 
