@@ -67,3 +67,38 @@ def regrid(input_im,template_im,**kwargs):
     fh2.close()
     print('Created '+regr_image)
     return regr_image
+
+# This function is to get rid of the "dummy" dimensions of ALMA continuum images, which by default come with 
+# 4 dimensions (2 spatial, 1 spectral, 1 polarization)
+
+def updatefits(fname, ext):
+    hdu, hduhead = fits.getdata(fname, header=True, ext=ext)
+    allkeys = ['NAXIS4','CRPIX4','CDELT4', 'CUNIT4', 'CTYPE4', 'CRVAL4',
+        'NAXIS3','CRPIX3','CDELT3', 'CUNIT3', 'CTYPE3', 'CRVAL3',
+        'PC01_01','PC02_01','PC03_01','PC04_01',
+        'PC01_02','PC02_02','PC03_02','PC04_02',
+        'PC01_03','PC02_03','PC03_03','PC04_03',
+        'PC01_04','PC02_04','PC03_04','PC04_04',
+        'PC1_1', 'PC1_2', 'PC1_3', 'PC1_4', 
+        'PC2_1', 'PC2_2', 'PC2_3', 'PC2_4',
+        'PC3_1', 'PC3_2', 'PC3_3', 'PC3_4',
+        'PC4_1', 'PC4_2', 'PC4_3', 'PC4_4' ]
+    rm_key = []
+    for i in allkeys:
+        if i in hduhead:
+            rm_key = np.append( rm_key, i)
+    ##------------------------------------
+    if len(rm_key) >0 :
+        for key_i in rm_key:
+            hduhead.remove(key_i)
+    hduhead['NAXIS'] = 2
+    hduhead['WCSAXES'] = 2
+
+    if hdu.ndim==2:
+        hdud = hdu
+    elif hdu.ndim==3:
+        hdud = hdu[0]
+    elif hdu.ndim==4:
+        hdud = hdu[0][0]
+        
+    return fits.PrimaryHDU(header=hduhead, data=hdud)

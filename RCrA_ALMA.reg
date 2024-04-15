@@ -1,0 +1,5 @@
+# Region file format: DS9 version 4.1
+# Filename: /home/roberto/YSOs/RCrA/member.uid___A001_X2d1f_Xb26.RCrA_IRS7B_sci.spw23_25_27_29_31_33_35_37_39_41_43_45_47_49_51.cont.I.tt0.pbcor.fits
+global color=green dash=0 dashlist=8 3 delete=1 edit=1 fixed=0 font="helvetica 10 normal roman" highlite=1 include=1 move=1 select=1 source=1 width=1
+fk5
+box(-74.526280,-36.952429,3.48",3.17",0)
